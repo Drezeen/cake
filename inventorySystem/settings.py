@@ -79,14 +79,21 @@ WSGI_APPLICATION = 'inventorySystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#} 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'andydatbase',
+        'USER': 'root',
+        'PASSWORD': '0701955343Andy.',
+        'HOST': 'localhost',  # Set to your MySQL host
+        'PORT': '3306',       # Default MySQL port
     }
-}
-DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 
